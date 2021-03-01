@@ -15,6 +15,7 @@ public class RestUtils {
 			URL url = new URL(urlStr);
 			conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
+			conn.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:221.0) Gecko/20100101 Firefox/31.0");
 			conn.setRequestProperty("Accept", "application/json");
 
 			if (conn.getResponseCode() != 200) {
